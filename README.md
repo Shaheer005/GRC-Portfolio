@@ -293,7 +293,7 @@ Educational portfolio - All frameworks and methodologies reference published sta
 
 ---
 
-**Last Updated**: June 2, 2026
+**Last Updated**: June 3, 2026
 **Assessment Company**: TechCo Pvt Ltd (Fictional)
 **Standard**: ISO 27001:2022
 **Assessment Type**: Comprehensive Gap Analysis
