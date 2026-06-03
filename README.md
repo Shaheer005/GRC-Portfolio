@@ -11,14 +11,23 @@ This portfolio contains practical GRC artifacts that demonstrate understanding o
 - **Risk**: Systematic identification, assessment, and mitigation of security risks
 - **Compliance**: Alignment with international standards (ISO 27001, NIST CSF, GDPR)
 
+### Artifacts Included:
+1. **ISO 27001 Gap Analysis** — Control assessment (20 critical controls)
+2. **Risk Register** — Organizational risk identification and scoring (10 organizational risks)
+3. **Supporting Documentation** — Methodology, executive summary, detailed explanations
+
 ### Case Study: TechCo Pvt Ltd
-A fictional 50-person software company in Karachi serving as the basis for all assessments. Used to demonstrate realistic gap analysis in a startup environment.
+A fictional 50-person software company in Karachi serving as the basis for all assessments. Used to demonstrate realistic security assessment in a startup environment.
 
 ---
 
 ## 📁 Contents
 
 ### 1. **ISO 27001 Gap Analysis** (`ISO27001_Gap_Analysis_TechCo.xlsx`)
+
+**What it is**: A comprehensive control assessment against ISO 27001:2022 Annex A (93 controls across 4 themes).
+
+### 2. **Risk Register** (`Risk_Register_TechCo.xlsx`)
 
 **What it is**: A comprehensive control assessment against ISO 27001:2022 Annex A (93 controls across 4 themes).
 
@@ -47,6 +56,51 @@ A fictional 50-person software company in Karachi serving as the basis for all a
 3. Check Summary tab for high-level risk metrics
 4. Use recommendations as roadmap for security improvements
 
+### 2. **Risk Register** (`Risk_Register_TechCo.xlsx`)
+
+**What it is**: A comprehensive organizational risk assessment using Likelihood × Impact scoring methodology.
+
+**What you'll find**:
+- **Risk Register Sheet**: 10 organizational risks evaluated across:
+  - Risk ID (unique identifier)
+  - Asset (what's at risk)
+  - Threat (what could go wrong)
+  - Vulnerability (why it's possible)
+  - Likelihood (1-5 scale)
+  - Impact (1-5 scale)
+  - Risk Score (Likelihood × Impact = 1-25)
+  - Treatment (Mitigate/Accept/Transfer/Avoid)
+  - Owner (who's responsible)
+  - Status (Not Started/In Progress/Planned/Monitored)
+
+- **Summary Sheet**: Auto-calculated metrics showing:
+  - Risk distribution by severity (0 Critical, 3 High, 7 Medium, 0 Low)
+  - Treatment strategy breakdown (8 Mitigate, 1 Accept, 1 Avoid)
+  - Implementation status (3 Not Started, 4 In Progress, 2 Planned, 1 Monitored)
+
+**Key Findings**:
+- 🟠 **3 HIGH-RISK items** (scores 13-20):
+  - Phishing Attack (16)
+  - Unauthorized Database Access (16)
+  - Data Breach via Third Party (15)
+
+- 🟡 **7 MEDIUM-RISK items** (scores 6-12):
+  - Unpatched Server Vulnerability
+  - Insider Threat/Data Theft
+  - DDoS Attack
+  - Missing Security Headers
+  - Weak Password Policy
+  - No MFA on Critical Systems
+  - Outdated Dependencies
+
+**How to Use**:
+1. Open in Excel and review Risk Register tab
+2. Understand each risk (Likelihood × Impact scoring)
+3. Note which risks are high-priority (orange color)
+4. Review treatment strategy for each risk
+5. Check Summary tab for distribution metrics
+6. Use as roadmap for security remediation
+
 ---
 
 ## 🎯 GRC Concepts Demonstrated
@@ -58,10 +112,11 @@ A fictional 50-person software company in Karachi serving as the basis for all a
 - Vendor management processes
 
 ### Risk
-- Control assessment methodology
-- Risk prioritization (Critical/High/Medium/Low)
-- Likelihood vs. Impact evaluation
-- Mitigation strategies
+- **Control assessment methodology** (Gap Analysis)
+- **Risk identification and scoring** (Risk Register)
+- **Likelihood vs. Impact evaluation** (1-5 scale)
+- **Risk prioritization** (Critical/High/Medium/Low)
+- Mitigation strategies and treatment selection
 
 ### Compliance
 - ISO 27001:2022 Annex A alignment
@@ -102,9 +157,25 @@ A fictional 50-person software company in Karachi serving as the basis for all a
 
 ---
 
-## 💡 Key Recommendations Summary
+## 📊 Assessment Methodology
 
-### Critical Priority (Immediate Action)
+### 1. Gap Analysis (Controls)
+Evaluated 20 critical ISO 27001:2022 controls against current state.
+- Status: 3 Implemented (15%), 7 Partial (35%), 10 Missing (50%)
+- Overall risk from missing controls: MEDIUM
+
+### 2. Risk Register (Organizational Risks)
+Identified and scored 10 organizational risks using Likelihood × Impact methodology.
+- High-Risk items: 3 (Phishing, Unauthorized access, Third-party breach)
+- Medium-Risk items: 7 (Unpatched systems, weak passwords, no MFA, etc.)
+- Risk score range: 1-25 (higher = worse)
+
+### Combined Assessment
+- **Gap Analysis** identifies WHAT controls are missing
+- **Risk Register** prioritizes WHICH risks to address first
+- Together they form a complete security assessment and remediation roadmap
+
+---
 1. **Implement PAM Solution** (A.8.2, A.9.2)
    - Recommended: HashiCorp Vault or AWS IAM
    - Requirement: Full audit logging of admin actions
